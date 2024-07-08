@@ -17,7 +17,7 @@ const userinforoute = require('./authentication/userinfo.js')
 const adminroute = require('./admin/admin.js')
 const createflightroute = require('./api/createflight.js')
 mongoose.connect(process.env.MONGODB_URI);
-const flightDBConnection = mongoose.createConnection(process.env.MONGODB_URI_ANOTHER);
+const flightDBConnection = mongoose.createConnection("mongodb+srv://admin:Airhawks123@airhawks-database.q7484wt.mongodb.net/flights_db");
 const adminDBConnection = mongoose.createConnection("mongodb+srv://admin:Airhawks123@airhawks-database.q7484wt.mongodb.net/admin_portal");
 const app = express();
 app.use(bodyParser.json());
